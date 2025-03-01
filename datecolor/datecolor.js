@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>learning</title>
-    <style>
-        #stop{
-            background-color: rgb(255, 166, 0);
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            font-size: 14px;
-            font-weight: 600;
-            font-family: system-ui;
-
-        }
-        #time{
-            margin-left: 400px;
-            font-size: 50px;
-            font-weight: 700;
-        }
-    </style>
-</head>
-<body style="background-color: #212121;color: white;font-family: system-ui;">
-    <h1>Hey Aditya this side</h1>
-    <button id="stop">Start</button>
-    <span id="time" ></span>
-</body>
-<script>
      
     let timeTag = document.getElementById('time')
+    let colorTag = document.getElementById('currentcolor')
     let setFun;
     let BgChanger;
-    // let randomColors = ["red","blue","#212121","green","pink"]
     let stopBtn = document.getElementById('stop')
     const hex = "0123456789ABCDEF";
     
@@ -53,6 +23,8 @@
          }
 
          document.body.style.background = color
+         colorTag.innerHTML  = `Current Color : ${getComputedStyle(document.body).backgroundColor}`
+
          },1000)
     }
     
@@ -62,15 +34,14 @@
             startTimer()
             setBgColor()
             stopBtn.innerHTML = "Stop"
+            colorTag.innerHTML  = `Current Color : ${getComputedStyle(document.body).backgroundColor}`
+
         }
         else{
             clearInterval(setFun)
             clearInterval(BgChanger)
             stopBtn.innerHTML = "Start"
+            colorTag.innerHTML  = `Current Color : ${getComputedStyle(document.body).backgroundColor}`
         }
 
     })
-
-
-</script>
-</html>

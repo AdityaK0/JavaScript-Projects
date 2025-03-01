@@ -18,7 +18,6 @@ body {
     background-color: var(--background-color);
 }
 
-/* Navigation */
 nav {
     position: fixed;
     width: 100%;
@@ -321,7 +320,7 @@ section {
     }
     
     .nav-links {
-      display: none; /* You might want to add a mobile menu here */
+      display: none; 
     }
     
     .hero-content h1 {
@@ -396,7 +395,6 @@ section {
     }
   }
   
-  /* Add a mobile menu button */
   .mobile-menu-btn {
     display: none;
     font-size: 1.5rem;
@@ -417,7 +415,6 @@ section {
     }
   }
 
-  /* Mobile Menu Styles */
 @media screen and (max-width: 768px) {
     .skill-category h3 {
         margin-bottom: 1.5rem;
@@ -427,7 +424,7 @@ section {
     .nav-links {
         display: flex;
         position: fixed;
-        top: 70px; /* Adjust based on your navbar height */
+        top: 70px; 
         left: 0;
         right: 0;
         flex-direction: row;
@@ -446,7 +443,6 @@ section {
         margin: 1rem 0;
     }
 
-    /* Optional: Animate the menu button */
     .mobile-menu-btn.active i {
         transform: rotate(90deg);
     }

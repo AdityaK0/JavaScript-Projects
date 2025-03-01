@@ -160,10 +160,5 @@ apibtn.addEventListener('click', async ()=>{
     
     loading.style.visibility = "visible"
     
-
-
-
-    
-    
     
 })

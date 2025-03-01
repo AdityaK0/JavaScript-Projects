@@ -2,6 +2,7 @@ let nextBtn = document.getElementById("next");
 let previousBtn = document.getElementById("previous");
 let imageDiv = document.getElementById("imageContainer");
 let count = 0
+let autoBtn = document.getElementById('autoslide')
 
 const images = [
     "https://images.unsplash.com/photo-1519681393784-d120267933ba",
@@ -31,3 +32,57 @@ function updateCrausalImage(direction){
 
 nextBtn.addEventListener("click",()=>updateCrausalImage(1))
 previousBtn.addEventListener("click",()=>updateCrausalImage(-1))
+
+let slideAuto  = false
+let slideInterval = null;
+
+autoBtn.addEventListener("click",(e)=>{
+    if(!slideAuto){
+        e.target.innerHTML = "AutoSlide ON"
+        slideAuto = true
+        slideInterval = setInterval(()=>{
+        nextBtn.click()
+          
+        },2000)
+
+    }
+    else{
+        e.target.innerHTML = "AutoSlide OFF"
+        clearInterval(slideInterval);
+        slideAuto = false
+    }
+})
+
+// let bgBtn = document.getElementById("bg")
+
+// bgBtn.addEventListener("click",(e)=>{
+//     console.log("pepe");
+    
+//     let currentBg  = getComputedStyle(document.body).backgroundColor
+//     console.log(currentBg);
+    
+//     if(currentBg ===  "rgb(33, 33, 33)"){
+//         console.log("pepe inside");
+        
+//         Array.from(document.getElementsByTagName('button')).forEach((element)=>{
+            
+//             element.classList.add("bgbutton")
+//             element.classList.remove("button")
+//             document.body.style.backgroundColor = "white"
+
+
+//         })
+
+//     }
+//     else{
+//         console.log("outside");
+        
+//         Array.from(document.getElementsByTagName('button')).forEach((element)=>{
+//             element.classList.add("button")
+//             element.classList.remove("bgbutton")
+//             document.body.style.backgroundColor = "rgb(33, 33, 33)"
+
+//         })
+
+//     }
+// })

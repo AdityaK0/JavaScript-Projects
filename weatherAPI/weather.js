@@ -1,3 +1,6 @@
+
+
+
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
 const errorDiv = document.getElementById('error');
@@ -116,12 +119,9 @@ function showError(message) {
     errorDiv.style.display = 'block';
 }
 
-// Demo function to simulate API response (use this if you don't have an API key)
 function demoMode() {
-    // Check if we're in demo mode
     if (apiKey === '929b8f52f2f84a2b60b9f39b79e8ecdd') {
         const demoMessageContainer = document.getElementById('demo-message-container');
-        // Add a message to inform about demo mode
         const container = document.querySelector('.container');
         const demoMessage = document.createElement('div');
         demoMessage.style.padding = '1rem';
@@ -133,13 +133,11 @@ function demoMode() {
         }
         container.insertBefore(demoMessage, cityInput.parentElement.parentElement);
         
-        // Override fetch with demo data
         window.originalFetch = window.fetch;
         window.fetch = function(url) {
             return new Promise((resolve) => {
                 setTimeout(() => {
                     if (url.includes('weather?q=')) {
-                        // Extract city name from URL
                         const cityMatch = url.match(/q=([^&]+)/);
                         const city = cityMatch ? cityMatch[1] : 'Unknown';
                         
@@ -161,7 +159,6 @@ function demoMode() {
                             })
                         });
                     } else if (url.includes('forecast?q=')) {
-                        // Demo forecast data
                         resolve({
                             ok: true,
                             json: () => {

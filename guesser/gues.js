@@ -59,6 +59,7 @@ function createPlayAgainButton() {
     newGame.textContent = "Play Again";
     newGame.style.display = "block";
     newGame.style.marginTop = "10px";
+    newGame.style.margin = "10px auto";
 
     removeExistingButtons();
 
