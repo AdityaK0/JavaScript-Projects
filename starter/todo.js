@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     itemParent.style.marginRight="4rem";
 
     let value = JSON.parse(localStorage.getItem("data")) || ["Enjoy CRUD and all features"]; 
+    if( value.length == 0){
+        value = ["Enjoy CRUD and all features"]
+    }
 
     value.forEach((itemText) => {
         addListItem(itemParent, itemText);
