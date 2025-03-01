@@ -117,6 +117,7 @@
         
 
         .newDiv li {
+            /* width: 100%; */
             flex-grow: 1;
             font-size: 16px;
             font-weight: 500;
@@ -141,7 +142,20 @@
         margin: 20px 0;
     }
 
-
+    @media (max-width: 600px) {
+            .input-group {
+                flex-direction: column;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            button {
+                width: 100%;
+            }
+            .alex{
+                flex-direction: column;
+            }
+        }
 
 
 
@@ -173,8 +187,11 @@
     <br>
     <div class="div3">
         <input type="text" id="newItem" style="padding: 9px;border-radius: 2px;outline: none;border:none;border:1.2px solid black;">
-        <button id="additem" class="delbtn">AddItem</button>
-        <button id="deleteitem" class="delbtn">Delete TopItem</button>
+        <div class="alex">
+            <button id="additem" class="delbtn">AddItem</button>
+            <button id="deleteitem" class="delbtn">Delete TopItem</button>
+        </div>
+
 
     </div>
     <!-- <input type="text" id="newItem" style="padding: 9px;border-radius: 2px;outline: none;border:none;border:1.2px solid black;">
