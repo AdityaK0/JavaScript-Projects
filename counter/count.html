@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #212121;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        #data {
+            font-size: 2rem;
+            font-weight: bold;
+            /* margin: 15px 0; */
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #ff5722;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #e64a19;
+            transform: scale(1.1);
+        }
+
+        button#res {
+            background: #757575;
+        }
+
+        button#res:hover {
+            background: #616161;
+        }
+    </style>
+</head>
+<body>
+    <div style="min-height: 130px;">
+        <h1 id="msg"></h1>
+    </div>
+
+    <h1>Counter App</h1>
+    <p id="data">0</p>
+    <div class="btn-container">
+        <button id="dec">-</button>
+        <button id="res">Reset</button>
+        <button id="inc">+</button>
+    </div>
+
+    <script src="count.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<form>
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="email" id="email" placeholder="Enter your email">
+    <input type="password" id="password" placeholder="Enter your password">
+    <input type="password" id="password1" placeholder="Confirm your password">
+    <button type="submit" id="sub" disabled>Submit</button>
+    <span id="forname"></span>
+    <span id="forpassword1"></span>
+  </form>
+  
+  <script>
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let password = document.getElementById('password');
+    let password1 = document.getElementById('password1');
+    let btn = document.getElementById('sub');
+  
+    // Validation functions for each input
+    function validateName() {
+      let nameValue = name.value.trim();
+      let isValid = true;
+  
+      if (nameValue.length < 8) {
+        document.getElementById('forname').innerText = "The name length should be greater than 8";
+        name.style.border = "3px solid red";
+        isValid = false;
+      } else {
+        document.getElementById('forname').innerHTML = "<b style='color:green;'>Perfect!</b>";
+        name.style.border = "4px solid green";
+        setTimeout(() => {
+          document.getElementById('forname').innerHTML = "";
+          name.style.border = "none";
+        }, 2000);
+      }
+      return isValid;
+    }
+  
+    function validatePasswords() {
+      let isValid = true;
+  
+      if (password.value !== password1.value) {
+        document.getElementById('forpassword1').innerText = "Passwords do not match";
+        password1.style.border = "2px solid red";
+        isValid = false;
+      } else {
+        document.getElementById('forpassword1').innerHTML = "";
+        password.style.border = "2px solid green";
+        password1.style.border = "2px solid green";
+      }
+      return isValid;
+    }
+  
+    // Enable or disable the submit button
+    function toggleSubmitButton() {
+      if (validateName() && validatePasswords()) {
+        btn.disabled = false;
+        btn.style.background = "#0056b3";
+      } else {
+        btn.disabled = true;
+        btn.style.background = "lightblue";
+      }
+    }
+  
+    // Event listeners for each field
+    name.addEventListener('input', () => {
+      validateName();
+      toggleSubmitButton(); // Only check submit button status after validating each field
+    });
+  
+    password1.addEventListener('input', () => {
+      validatePasswords();
+      toggleSubmitButton();
+    });
+  
+    password.addEventListener('input', () => {
+      validatePasswords();
+      toggleSubmitButton();
+    });
+  </script>
+  

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        *{
+            font-family: system-ui;
+        }
+
+        .delbtn{
+
+            border-radius: 3px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            min-width: 88px;
+            font-weight: 600;
+            text-align: center;
+
+        }
+        .revdelbtn{
+
+            border-radius: 3px;
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            min-width: 88px;
+            font-weight: 600;
+            text-align: center;
+
+
+
+        }
+        .inputClass{
+            padding: 9px;border-radius: 2px;outline: none;border:none;border:1.2px solid black;
+        }
+        
+
+    </style>
+</head>
+<body id="x" >
+    <div class="bg-black">
+        <div style="display: flex; justify-content: space-between;" >
+        <h1 id="heading" >Dynamic Todo List with Theme Toggle and Local Storage</h1>
+        <h1 id="msg"  style="text-align: right;"></h1>
+        </div>
+        <p id="regid" class="delbtn" >Click on the Show Button and see your Date and Time</p>
+    </div>
+
+    <button id="reg" class="delbtn" >Show Date</button>
+    <button id="color" class="delbtn" >ChangeColor</button>
+    <br>
+    <br>
+    <input type="text" id="newItem" style="padding: 9px;border-radius: 2px;outline: none;border:none;border:1.2px solid black;">
+    <button id="additem" class="delbtn">AddItem</button>
+    <button id="deleteitem" class="delbtn">Delete TopItem</button>
+    
+    <h1>List of Added Items</h1>
+    <ul id="itemlist">
+    </ul>
+    <hr>
+
+    <p id="itemcount" ></p>
+
+
+
+<script src="t.js" ></script>
+</body>
+</html>                     
