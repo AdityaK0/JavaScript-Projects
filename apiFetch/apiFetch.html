@@ -12,16 +12,18 @@
             display: flex;
             padding: 20px;
             margin: 5px;
-            width: 1200px;
+            justify-content: center;
+
+            max-width: 1200px;
             flex-wrap: wrap;
         
         }
         #apivalues2{
             display: flex;
             padding: 20px;
+            justify-content: center;
             margin: 5px;
-            
-            width: 1200px;
+            max-width: 1200px;
             flex-wrap: wrap;
 
         }
@@ -91,13 +93,21 @@
             font-weight: 700;
 
         }
-        
-        
 
+
+        @media (max-width:700px) {
+            #apivales{
+                flex-direction: column;
+            }
+            #apivales2{
+                flex-direction: column;
+            }
+        }
+        
     </style>
 </head>
 <body id="x" >
-    <div style="display: flex;justify-content: space-between;width: 70%;">
+    <div style="display: flex;justify-content: space-between;width: 100%;">
 
         <div style="padding: 30px;">
             <button id="color" class="delbtn" >ChangeColor</button>
@@ -107,9 +117,13 @@
             <button id = "apidata" class="delbtn">Get API DATA</button>
             <div>
             
-                <div id="overall" style="margin-top: 2rem;">
-                    <span id="male" class="delbtn">Male : 0</span>
-                    <span id="female" class="delbtn">Female : 0</span>
+                <div id="overall" style="margin-top: 2rem;display: flex;justify-content: center;gap: 1rem;">
+                    <span id="male" class="delbtn" style="min-width: 80px;text-align: center;">Male : 0</span>
+                    <span id="female" class="delbtn" style="min-width: 80px;text-align: center;">Female : 0</span>
+                </div>
+                         
+                <div style="margin-top: 25px" >
+                    <span id="apiTime" class="delbtn" style="min-width: 170px;text-align: center;">Api Call Time : 00:00</span>
                 </div>
         
                 <p style="visibility: hidden;margin-top: 2rem;" id="loading">Loading .........</p>
@@ -123,10 +137,7 @@
 
 
 
-         
-        <div style="margin-top: 4rem;" >
-            <span id="apiTime" class="delbtn">Api Call Time : 00:00</span>
-        </div>
+
 
 
 
