@@ -32,6 +32,10 @@
             text-align: center;
             background-color: var(--secondary-color);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.3rem;
         }
         
         .container {
@@ -217,16 +221,46 @@
 </head>
 <body>
     <header>
-        <h1>JavaScript Projects Portfolio</h1>
+        <h1>JavaScript Projects Portfolio </h1>
+        <svg width="35px" height="35px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.01005 0.858582L6.01005 14.8586L7.98995 15.1414L9.98995 1.14142L8.01005 0.858582Z" fill="#ffffff"/>
+            <path d="M12.5 11.5L11.0858 10.0858L13.1716 8L11.0858 5.91422L12.5 4.5L16 8L12.5 11.5Z" fill="#ffffff"/>
+            <path d="M2.82843 8L4.91421 10.0858L3.5 11.5L0 8L3.5 4.5L4.91421 5.91422L2.82843 8Z" fill="#ffffff"/>
+        </svg>
     </header>
     
     <div class="container">
         <section class="intro">
-            <h2>My JavaScript Projects</h2>
+            <h2>My JavaScript Projects 
+</h2>
             <p>Welcome to my portfolio! Here are some of my JavaScript projects that demonstrate DOM manipulation, data handling, and other JavaScript concepts.</p>
         </section>
         
         <section class="projects-grid">
+            <div class="project-card">
+                <div class="card-img">
+                    <img src="./apiFetch/newsapp.png" alt="DOM Manipulation Project">
+                </div>
+                <div class="card-content">
+                    <h3>NewsWebApp : Experience the latest news at your fingertips</h3>
+                    <div>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">DOM</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">External News API</span>
+                    </div>
+                    <p>This project is a simple news app built with HTML, CSS, JavaScript, and a third-party news API. I created this website to learn JavaScript, specifically focusing on fetching data from an external API, handling errors, and dynamically displaying information on a webpage. The project helped me gain hands-on experience with modern JavaScript practices and client-server interactions.</p>
+                    <div class="live-demo" >
+                        <h4>Live Demo and Code:</h4>
+                        <div class="demo-container">
+                                <a href="https://newswebapp-gilt.vercel.app/" class="btn" target="_blank">View Live</a>
+                                <a href="https://github.com/AdityaK0/NewsWebsite-Using-API" class="btn">View Code</a>
+
+                        </div>
+                    </div>                    
+                </div>
+            </div>
             <div class="project-card">
                 <div class="card-img">
                     <img src="./weatherAPI/weather.png" alt="DOM Manipulation Project">
@@ -236,6 +270,7 @@
                     <div>
                         <span class="tag">JavaScript</span>
                         <span class="tag">DOM</span>
+                        <span class="tag">HTML</span>
                         <span class="tag">CSS</span>
                         <span class="tag">External Weather API</span>
                     </div>
